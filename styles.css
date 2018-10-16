@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#carousel {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+#header {
+    position: absolute;
+    display: flex;
+    left: 45%;
+    font-weight: bold;
+    font-size: 45px;
+    font-style: italic magenta;
+}
+
+.kitty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition-property: 'transform';
+    transition-duration: 0s;
+}
+
+.kitty.onscreen {
+    transform: translateX(0);
+    transition-duration: 1s;
+}
+
+.kitty.exit {
+    transform: translateX(-100%);
+    transition-duration: 1s;
+}
+
+.kitty img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.button {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: transparent;
+    border: solid 2px white;
+}
+
+#container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 7%;
+    left: 45%;
+    height: 30px;
+    width: 110px;
+}
+
+.active {
+    background: white;
+}
